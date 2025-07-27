@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="973.0" style="-fx-background-color: #404040;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.medicalproject.Controllers.AppointmentFormController">
+    <children>
+        <VBox maxWidth="1.7976931348623157E308" prefHeight="768.0" prefWidth="792.0" StackPane.alignment="CENTER">
+            <children>
+                <HBox maxWidth="1.7976931348623157E308" prefHeight="46.0" prefWidth="600.0">
+                    <children>
+                        <Label text="Ph." textFill="#d83131">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="297.0" layoutY="10.0" style="-fx-text-fill: #fff;" text="Medical">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="20.0" top="10.0" />
+                    </padding>
+                </HBox>
+                <Label alignment="CENTER" contentDisplay="TOP" maxWidth="1.7976931348623157E308" prefHeight="58.0" prefWidth="606.0" style="-fx-text-fill: #fff;" text="New Appointment" textAlignment="CENTER">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <HBox alignment="CENTER" prefHeight="76.0" prefWidth="719.0" spacing="200.0">
+                    <padding>
+                        <Insets left="20.0" top="10.0" />
+                    </padding>
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <Label contentDisplay="CENTER" style="-fx-text-fill: #fff;" text="Patient ID" />
+                                <TextField fx:id="patientID" maxWidth="300.0" minWidth="261.0" prefHeight="48.0" prefWidth="261.0" promptText="Patient ID" style="-fx-background-color: #D9D9D9;">
+                                    <padding>
+                                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                    </padding>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </TextField>
+                            </children>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="66.0" prefWidth="205.0">
+                            <children>
+                                <Label style="-fx-text-fill: #fff;" text="Doctor:" />
+                        <ChoiceBox fx:id="availableDoctors" prefHeight="47.0" prefWidth="205.0" />
+                            </children>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </VBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="50.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="46.0" prefWidth="600.0" spacing="100.0">
+                    <padding>
+                        <Insets left="20.0" top="10.0" />
+                    </padding>
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="66.0" prefWidth="229.0">
+                            <children>
+                                <Label contentDisplay="CENTER" style="-fx-text-fill: #fff;" text="Date" />
+                        <Label fx:id="appointmentDate" alignment="CENTER" prefHeight="53.0" prefWidth="229.0" textFill="#00d9b5">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                            </children>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="42.0" prefWidth="231.0">
+                            <children>
+                                <Label style="-fx-text-fill: #fff;" text="Time" />
+                        <Label fx:id="appointmentTime" alignment="CENTER" prefHeight="53.0" prefWidth="229.0" textFill="#00d9b5">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                            </children>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </VBox>
+                    </children>
+                </HBox>
+                <VBox alignment="CENTER" prefHeight="186.0" prefWidth="1076.0" spacing="10.0">
+                    <children>
+                        <Label style="-fx-text-fill: #fff;" text="Description" />
+                        <HBox alignment="CENTER" prefHeight="34.0" prefWidth="687.0">
+                            <children>
+                                <TextField fx:id="appointmentDescription" alignment="CENTER" minWidth="649.0" prefHeight="48.0" prefWidth="649.0" promptText="Appointment Description" style="-fx-background-color: #D9D9D9;">
+                                    <padding>
+                                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                    </padding>
+                                </TextField>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Button  onAction="#cancelAppCreateBtn" contentDisplay="CENTER" minWidth="150.0" mnemonicParsing="false" style="-fx-background-color: #D83131; -fx-text-fill: #fff;" text="Cancel" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                            <padding>
+                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                            </padding>
+                        </Button>
+                        <Button contentDisplay="CENTER" minWidth="150.0" mnemonicParsing="false" onAction="#confirmAddAppointment" style="-fx-background-color: #009844; -fx-text-fill: #fff;" text="Submit">
+                            <HBox.margin>
+                                <Insets left="150.0" />
+                            </HBox.margin>
+                            <padding>
+                                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                            </padding>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</StackPane>
